@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <sys/mman.h>
 #include <unistd.h>
+#include <string.h>
 
 int main() {
     int fd = open("/dev/shmem_device", O_RDWR);

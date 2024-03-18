@@ -5,13 +5,14 @@
 #include <unistd.h>
 #include <string.h>
 
-#define DEVICE_PATH "/dev/shmem"
+#define DEVICE_PATH "/dev/shmem_device"
 #define PAGE_SIZE 4096
 
 int main() {
     int fd;
     char *mapped_mem;
     char message[] = "Message from A";
+
 
     fd = open(DEVICE_PATH, O_RDWR);
     if (fd < 0) {
